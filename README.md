@@ -19,4 +19,4 @@ In Auth flow framework, we've grasped all of the frameworks and tools that are r
     ```
     1. if no headers provided, status `401` is returned
     2. if verification failed, status `403` is returned
-* We've used `authenticate` middleware to verify and respond to the client.
+* We've used [`authenticate`](https://github.com/harshrajhrj/auth-flow-framework/blob/63517d748be59f5e3b8cf9bb012805e79975e365/server.js#L33-L43) middleware to verify and respond to the client.

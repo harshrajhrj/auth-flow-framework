@@ -41,4 +41,5 @@ function authenticate(req, res, next) {
         next();
     });
 }
+
 app.listen(3000, () => console.log('Listening to Auth flow framework'));
