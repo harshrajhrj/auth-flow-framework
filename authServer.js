@@ -11,10 +11,10 @@ let refreshTokens = [];
 
 app.post('/token', (req, res) => {
     const refreshToken = req.body.token;
-    if (refreshToken === null) return res.status(401);
-    if (!refreshTokens.includes(refreshToken)) return res.status(403);
+    if (refreshToken === null) return res.status(401).json({message : 'Unauthorized'});
+    if (!refreshTokens.includes(refreshToken)) return res.status(403).json({message : 'Forbidden'});
     jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
-        if (err) return res.status(403);
+        if (err) return res.status(403).json({message : 'Forbidden'});
         const accessToken = generateAccessToken({ name: user.name });
         res.json({ accessToken: accessToken });
     })
@@ -22,7 +22,7 @@ app.post('/token', (req, res) => {
 
 app.delete('/logout', (req, res) => {
     refreshTokens = refreshTokens.filter(token => token !== req.body.token);
-    res.status(204);
+    return res.status(204).json({message : 'Success'});
 })
 
 app.post('/login', (req, res) => {

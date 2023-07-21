@@ -25,13 +25,13 @@ app.get('/users', authenticate, (req, res) => {
 function authenticate(req, res, next) {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
-    if (token === null) res.status(401);
+    if (token === null) return res.status(401).json({message: 'Unauthorized'});
 
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-        if (err) return res.status(403);
+        if (err) return res.status(403).json({message : 'Forbidden'});
         req.user = user;
         next();
     });
 }
 
-app.listen(3000, () => console.log('Listening to Auth flow framework'));
+app.listen(3000, () => console.log('Listening to API server'));

@@ -1,13 +1,13 @@
 ###
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhc3dpa2EiLCJpYXQiOjE2ODk5NTM5NDEsImV4cCI6MTY4OTk1NDAwMX0.YcSwlgW7pbom2S4cNgp04SNSk_WsIrCymapSOpdqeVs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyc2ggUmFqIiwiaWF0IjoxNjg5OTU2NzI3LCJleHAiOjE2ODk5NTY3ODd9.BTz7JkN804BDN6n11oNUYF2H-Em9bArZAExbkeeOrzg
 
 ###
 POST http://localhost:4000/token
 Content-Type: application/json
 
 {
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU2hhc3dpa2EiLCJpYXQiOjE2ODk5NTM5NDF9.Jx_L_X5HNvn_bk4cJOHINkIHI14u36UC67FoTb9dzfo"
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyc2ggUmFqIiwiaWF0IjoxNjg5OTU2NzAxfQ.yW3YZnpFLVmDj1lnzfiNHqAdML0q0vQUg759UKByAWY"
 }
 
 ###
@@ -15,12 +15,13 @@ POST http://localhost:4000/login
 Content-Type: application/json
 
 {
-    "username" : "Shaswika"
+    "username" : "Harsh Raj"
 }
 
 ###
 DELETE http://localhost:4000/logout
+Content-Type: application/json
 
 {
-    "token" : 
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyc2ggUmFqIiwiaWF0IjoxNjg5OTU2NzAxfQ.yW3YZnpFLVmDj1lnzfiNHqAdML0q0vQUg759UKByAWY"
 }
