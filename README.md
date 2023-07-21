@@ -4,7 +4,7 @@ In Auth flow framework, we've grasped all of the frameworks and tools that are r
 ## Token creation
 * Enter into node terminal using following command:
 ```javascript
-C:\Users\.....>node
+C:\Users\PATH>node
 ```
 * Generate two tokens
     1. First token for `ACCESS_TOKEN`
@@ -12,5 +12,5 @@ C:\Users\.....>node
     require('crypto').randomBytes(64).toString('hex');
     ```
     This will generate 64 characters long string token
-    2. Second token for `REFRESH_TOKEN`
+    1. Second token for `REFRESH_TOKEN`
     Repeat the same as done in Step 1.
