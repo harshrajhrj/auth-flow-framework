@@ -13,7 +13,7 @@ const users = [
         "id": 1,
     },
     {
-        "name": "Shaswika",
+        "name": "Satyajit Kumar",
         "id": 2
     }
 ];
