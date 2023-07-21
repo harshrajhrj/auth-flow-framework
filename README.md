@@ -1,5 +1,7 @@
 # auth-flow-framework
 In Auth flow framework, we've grasped all of the frameworks and tools that are required for user authorization and authentication process.
+<br>
+[**Tutorial**](https://youtu.be/mbsmsi7l3r4)
 ## Token creation for resource exchange
 * Enter into node terminal using the command `C:\Users\PATH>node`.
 * Generate following two tokens and store them in `.env` variable.
