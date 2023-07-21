@@ -3,9 +3,7 @@ In Auth flow framework, we've grasped all of the frameworks and tools that are r
 
 ## Token creation
 * Enter into node terminal using following command:
-```javascript
-C:\Users\PATH>node
-```
+`C:\Users\PATH>node`
 * Generate two tokens
     1. First token for `ACCESS_TOKEN`
         ```javascript
