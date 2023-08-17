@@ -1,13 +1,13 @@
 ###
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyc2ggUmFqIiwiaWF0IjoxNjg5OTU2NzI3LCJleHAiOjE2ODk5NTY3ODd9.BTz7JkN804BDN6n11oNUYF2H-Em9bArZAExbkeeOrzg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJIYXJzaCBSYWoifSwiYWxsb3dlZE1ldGhvZHMiOlsiUE9TVCJdLCJpYXQiOjE2OTIyNjgyMTMsImV4cCI6MTY5MjI2ODI3M30.3KQBPypMdrG9mxKUN0cv0CWKm3B6yDntB7uKXM4boEI
 
 ###
 POST http://localhost:4000/token
 Content-Type: application/json
 
 {
-    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSGFyc2ggUmFqIiwiaWF0IjoxNjg5OTU2NzAxfQ.yW3YZnpFLVmDj1lnzfiNHqAdML0q0vQUg759UKByAWY"
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJIYXJzaCBSYWoifSwiYWxsb3dlZE1ldGhvZHMiOlsiUE9TVCJdLCJpYXQiOjE2OTIyNjgyMTN9.nA6MN7xpOqlvVN9PT6qZX4nFexCz68NmHQCqIlWj6eI"
 }
 
 ###
