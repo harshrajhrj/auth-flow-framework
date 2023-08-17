@@ -32,3 +32,8 @@ In Auth flow framework, we've grasped all of the frameworks and tools that are r
 * In this setup, we use one authentication middleware and resources exchange API
     1. `Authentication`<sup>[Code](https://github.com/harshrajhrj/auth-flow-framework/blob/82c86e9cf153860959f8c5fcba942aec0cfdff79/server.js#L25-L35)</sup> - This middleware always checks for a valid jwt token associated with the right user. If the check becomes false, then `Unauthorized` or `Forbidden` response is sent else the `next()` is called to allow resource exchange.
     2. `Resource exchange API`<sup>[Code](https://github.com/harshrajhrj/auth-flow-framework/blob/82c86e9cf153860959f8c5fcba942aec0cfdff79/server.js#L21)</sup> - After successful jwt validation, this API allows to exchange resources.
+## Whitelisting allowed methods
+* In this process, we'll whitelist the methods that are to be allowed while making requests after authentication. Following properties can be used to whitelist a method:
+    1. `allowedMethods` - The property is of type `Array`. In this property we can add the methods which can be allowed to request.
+* Signing `allowedMethods` together with `user` capped within an object.<sup>[Code](https://github.com/harshrajhrj/auth-flow-framework/blob/516d374291f0943b757bf0864f5ca2dc91d7ddf8/authServer.js#L41-L43)</sup>
+* Verifying `allowedMethods` property for a specific method request using a middleware.<sup>[Code](https://github.com/harshrajhrj/auth-flow-framework/blob/516d374291f0943b757bf0864f5ca2dc91d7ddf8/server.js#L32)</sup>
