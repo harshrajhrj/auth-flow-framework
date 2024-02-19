@@ -32,14 +32,14 @@ app.post('/login', (req, res) => {
     const user = { name: username };
 
     const accessToken = generateAccessToken(user);
-    const refreshToken = jwt.sign({ user, allowedMethods: ['POST'] }, process.env.REFRESH_TOKEN_SECRET);
+    const refreshToken = jwt.sign({ user, allowedMethods: ['GET'] }, process.env.REFRESH_TOKEN_SECRET);
     refreshTokens.push(refreshToken);
 
     res.json({ accessToken: accessToken, refreshToken: refreshToken });
 });
 
 function generateAccessToken(user) {
-    return jwt.sign({ user, allowedMethods: ['POST'] }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1m' });
+    return jwt.sign({ user, allowedMethods: ['GET'] }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '5m' });
 }
 
 app.listen(4000, () => console.log('Listening to Auth server'));

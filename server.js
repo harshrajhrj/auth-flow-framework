@@ -30,7 +30,7 @@ function authenticate(req, res, next) {
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
         if (err) return res.status(403).json({ message: 'Forbidden' });
         if (!user.allowedMethods.includes(req.method)) return res.status(403).json({ error: 'Access denied for this method.' });
-        req.user = user;
+        req.user = user.user;
         next();
     });
 }
