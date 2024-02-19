@@ -1,6 +1,6 @@
 ###
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJIYXJzaCBSYWoifSwiYWxsb3dlZE1ldGhvZHMiOlsiUE9TVCJdLCJpYXQiOjE3MDgzNDQwNjUsImV4cCI6MTcwODM0NDM2NX0.c6RZiZSvqxf8gC-PriMPUSZeifCDrhaDJep9vn98vPk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiOiJIYXJzaCBSYWoifSwiYWxsb3dlZE1ldGhvZHMiOlsiR0VUIl0sImlhdCI6MTcwODM2NDcwNywiZXhwIjoxNzA4MzY0NzY3fQ.u-RhSqizj7fcYyef0F83QBieLbEeTYF3R95onNOlCbM
 
 ###
 POST http://localhost:4000/token

@@ -29,8 +29,13 @@ function authenticate(req, res, next) {
     if (token === null) return res.status(401).json({ message: 'Unauthorized' });
 
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-        if (err) return res.status(403).json({ message: 'Forbidden' });
-        if (!user.allowedMethods.includes(req.method)) return res.status(403).json({ error: 'Access denied for this method.' });
+        if (err) {
+            if (err.message === 'jwt expired')
+                return res.status(401).json({ message: 'Token expired' });
+            else
+                return res.status(403).json({ message: 'Forbidden' });
+        }
+        if (!user.allowedMethods.includes(req.method)) return res.status(405).json({ error: 'Access denied for this method.' });
         req.user = user.user;
         next();
     });

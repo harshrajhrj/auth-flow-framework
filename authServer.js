@@ -56,12 +56,12 @@ app.post('/login', async (req, res) => {
 });
 
 async function generateAccessToken(user) {
-    const accessToken = jwt.sign({ user, allowedMethods: ['GET'] }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '5m' });
+    const accessToken = jwt.sign({ user, allowedMethods: ['GET', 'POST', 'DELETE'] }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' });
     return accessToken;
 }
 
 async function generateRefreshToken(user) {
-    const refreshToken = jwt.sign({ user, allowedMethods: ['GET'] }, process.env.REFRESH_TOKEN_SECRET);
+    const refreshToken = jwt.sign({ user, allowedMethods: ['GET', 'POST', 'DELETE'] }, process.env.REFRESH_TOKEN_SECRET);
 
     // save refresh token to database
     // refreshTokens.push(refreshToken);
